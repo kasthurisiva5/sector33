@@ -15,7 +15,7 @@
 	<link href="./kasthuri-sector33_files/jquery-ui.css" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="./kasthuri-sector33_files/main.css">
 
-	<script type="text/javascript" id="www-widgetapi-script" src="./kasthuri-sector33_files/www-widgetapi.js" async=""></script><script src="./kasthuri-sector33_files/iframe_api"></script><script src="./kasthuri-sector33_files/jquery-1.10.2.min.js"></script>
+	<script t-pe="text/javascript" id="www-widgetapi-script" src="./kasthuri-sector33_files/www-widgetapi.js" async=""></script><script src="./kasthuri-sector33_files/iframe_api"></script><script src="./kasthuri-sector33_files/jquery-1.10.2.min.js"></script>
     <script src="./kasthuri-sector33_files/jquery-ui.min.js"></script>
     <script src="./kasthuri-sector33_files/jquery.ui.touch-punch.min.js"></script>
     <script src="./kasthuri-sector33_files/jquery.cookie.js"></script>
@@ -35,7 +35,7 @@
 
     <div style="text-align:left;vertical-align:middle;">
         <a href="http://www.nasa.gov/" target="_blank" "="">
-            <img src="./kasthuri-sector33_files/meatball42.png" alt="NASA Website, meatball image used" name="NASA_Meatball" style="width:50px;height:42px;vertical-align:middle;" id="NASA_Meatball">
+            <img src="./kasthuri-sector33_files/meatball42.png" alt="NASA Website, meatball image used" name="NASA_Meatball" style="width:100px;height:90px;vertical-align:middle;top:90px" id="NASA_Meatball">
             </a>
             <!-- <span style="margin-left:20px;vertical-align:middle;">
         <strong>Sector 33 Classroom</strong>
@@ -140,8 +140,8 @@
   <img id="createBackButton" src="./kasthuri-sector33_files/S33CE-backbutton.png" alt="back to solve" class="imageButton" onclick="backFromCreateMode();">
   </span>
   <span style="width:120px;position:fixed;left:120px;">
-  <img id="problemButton" src="./kasthuri-sector33_files/bluebutton.png" alt="modify a problem" style="width:140px;height:80px;top:-6px;position:absolute;" onclick="selectProblem(true);">
-  <span id="cproblemSpan" onclick="selectProblem(true);" onselectstart="function(){ return false;}" class="buttonText" style="width:140px;text-align:center;color:white;left:1px;top:10px;">Modify a <br>Problem
+  <img id="problemButton" src="./kasthuri-sector33_files/bluebutton.png" alt="modify a problem" style="width:140px;height:80px;top:-6px;position:absolute;top:90%" onclick="selectProblem(true);">
+  <span id="cproblemSpan" onclick="selectProblem(true);" onselectstart="function(){ return false;}" class="buttonText" style="width:140px;text-align:center;color:white;left:1px;top:90%;">Modify a <br>Problem
   </span>
   </span>
   
@@ -153,35 +153,54 @@
   </span>
   </div>
 
-    <div class="silverGradient" id="footer" style="background-image: url(&quot;images/S33-CE-silver-menu-solve.png&quot;);">
+    <!-- <div class="silverGradient" id="footer" style="background-image: url(&quot;images/S33-CE-silver-menu-solve.png&quot;);">
       <span style="width:100px;position:fixed;left:20px;">
-        <img id="problemButton" src="./kasthuri-sector33_files/bluebutton.png" alt="select problem" style="width:100px;height:60px;position:absolute;" onclick="selectProblem(false);">
-        <span id="problemSpan" onclick="selectProblem(false);" onselectstart="function(){ return false;}" class="buttonText" style="color:black;left:1px;top:15px;">2-1</span>
+        <img id="problemButton" 
+             src="./kasthuri-sector33_files/bluebutton.png" 
+             alt="select problem" 
+             style="
+                width:100px;
+                height:60px;
+                position:absolute;
+                bottom: -40px
+            "
+             onclick="selectProblem(false);">
+        <span id="problemSpan" onclick="selectProblem(false);" onselectstart="function(){ return false;}" class="buttonText" style="color:white;left:1px;top:91%;">2-1</span>
        </span>
-      <span style="width:60px;position:fixed;left:110px;">
-        <img id="playButton" src="./kasthuri-sector33_files/ssapp_play_icon2.png" alt="play game" class="imageButton" onclick="play();">
+      <span style="width:60px;position:fixed;left:110px;top:91.45%">
+        <img id="playButton" 
+             src="./kasthuri-sector33_files/ssapp_play_icon2.png" 
+             alt="play game" 
+             class="imageButton" 
+             onclick="play()"
+             style="width: 78px; height: auto; object-fit: contain;">
         </span>
-      <span style="width:60px;position:fixed;left:200px;">
-        <img id="changeSpeedButton" src="./kasthuri-sector33_files/ssapp_1x.png" alt="change speed" class="imageButton" onclick="changeSpeed();">
+      <span style="width:60px;position:fixed;left:180px;top:91%">
+        <img id="changeSpeedButton" 
+             src="./kasthuri-sector33_files/ssapp_1x.png" 
+             alt="change speed" 
+             class="imageButton" 
+             onclick="changeSpeed()"
+             style="width: 90px; height: auto; object-fit: contain;">
         </span>
 
-      <span style="width:60px;position:fixed;left:280px;">
+      <span style="width:60px;position:fixed;left:270px;top:auto;bottom:77px;;">
         <span id="incrementalTime" class="counterText" style="left: 1px; top: 20px;">0:00</span>
        </span>
-      <span style="width:240px;position:fixed;left:360px;">
+      <span style="width:240px;position:fixed;left:360px;bottom:73px">
          <div id="progressbar" style="height:7px;width:140px;color:green;background:gray;position:absolute;top:25px;left:1px;" class="ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="198" aria-valuenow="0"><div class="ui-progressbar-value ui-widget-header ui-corner-left" style="display: none; width: 0%;"></div></div>
          <div id="stepper" style="position: absolute; left: 15px; width: 320px; display: none;">
          <span id="minusButton" class="buttonInc">Rev</span>
          <span id="plusButton" class="buttonInc" style="left:55px;">Fwd</span>
          </div>
        </span>
-      <span style="width:60px;position:fixed;left:480px;">
+      <span style="width:60px;position:fixed;left:490px;bottom:77px">
         <span id="totalTime" class="counterText">3:18</span>
        </span>
-      <span style="width:60px;position:fixed;left:560px;">
+      <span style="width:60px;position:fixed;left:560px;top:92%">
         <img id="reloadButton" src="./kasthuri-sector33_files/ssapp_reset_icon.png" alt="reload problem" class="imageButton" onclick="reload();">
         </span>
-      <span style="width:60px;position:fixed;left:640px;">
+      <span style="width:100px;position:fixed;left:640px;top:91.5%">
         <img id="soundButton" src="./kasthuri-sector33_files/ssapp_mute_icon.png" alt="play problem sound" class="imageButton" onclick="sound(true);">
         </span>
       <span style="width:60px;position:fixed;left:720px;">
@@ -194,7 +213,112 @@
         <img id="helpButton" src="./kasthuri-sector33_files/S33-CE-help-button.png" alt="help on problem" class="imageButton" onclick="extras();">
         </span>
         
-   </div>
+   </div> -->
+   <!-- Fixed footer bar -->
+<div id="footerBar" style="
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 999;
+">
+
+  <!-- Problem button -->
+  <div style="
+  position: relative;
+  width: 90px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ">
+  
+  <img id="problemButton"
+       src="./kasthuri-sector33_files/bluebutton.png"
+       alt="select problem"
+       onclick="selectProblem(false);"
+       style="width: 100%; height: 100%; object-fit: contain;" />
+  <span id="problemSpan"
+        onclick="selectProblem(false);"
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-weight: bold;
+          pointer-events: none;
+        ">
+    2-1
+  </span>
+</div>
+  <!-- Play button -->
+  <img id="playButton"
+       src="./kasthuri-sector33_files/ssapp_play_icon2.png"
+       alt="play"
+       onclick="play();"
+       style="width: 78px; height: 60px; object-fit: contain;" />
+
+  <!-- Speed button -->
+  <img id="changeSpeedButton"
+       src="./kasthuri-sector33_files/ssapp_1x.png"
+       alt="change speed"
+       onclick="changeSpeed();"
+       style="width: 90px; height: 60px; object-fit: contain;" />
+
+  <!-- Timer -->
+  <span id="incrementalTime"
+        style="color: white; font-size: 16px; margin: 0 10px;">0:00</span>
+
+  <!-- Progress bar -->
+  <div style="width: 140px; height: 7px; background: gray;">
+    <div id="progressbar" style="width: 0%; height: 100%; background: green;"></div>
+  </div>
+
+  <!-- Total time -->
+  <span id="totalTime"
+        style="color: white; font-size: 16px; margin: 0 10px;">3:18</span>
+
+  <!-- Reload -->
+  <img id="reloadButton"
+       src="./kasthuri-sector33_files/ssapp_reset_icon.png"
+       alt="reload"
+       onclick="reload();"
+       style="width: 60px; height: 60px;" />
+
+  <!-- Sound -->
+  <img id="soundButton"
+       src="./kasthuri-sector33_files/ssapp_mute_icon.png"
+       alt="sound"
+       onclick="sound(true);"
+       style="width: 60px; height: 60px;" />
+
+  <!-- Review -->
+  <img id="reviewButton"
+       src="./kasthuri-sector33_files/S33-CE-review-button.png"
+       alt="review"
+       onclick="review();"
+       style="width: 90px; height: 60px; opacity: 0.6;" />
+
+  <!-- Create -->
+  <img id="createButton"
+       src="./kasthuri-sector33_files/S33-CE-create-button.png"
+       alt="create"
+       onclick="create();"
+       style="width: 90px; height: 60px;" />
+
+  <!-- Help -->
+  <img id="helpButton"
+       src="./kasthuri-sector33_files/S33-CE-help-button.png"
+       alt="help"
+       onclick="extras();"
+       style="width: 60px; height: 60px;" />
+</div>
+
 
 <img id="cyan" class="plane" src="./kasthuri-sector33_files/cyanplane.png" style="position: absolute; width: 40px; height: 40px; z-index: 9999; top: 61px; left: 716px; visibility: visible;"><div class="dataTag ui-draggable" id="cyantag" style="background-color: black; color: cyan; border-color: cyan; position: absolute; z-index: 2; top: 11.094px; left: 646.198px; visibility: visible;">AAL12<br><span id="speedSpan">600 kts</span></div><img id="limegreen" class="plane" src="./kasthuri-sector33_files/limegreenplane.png" style="position: absolute; width: 40px; height: 40px; z-index: 2; top: 226px; left: 802.68px; visibility: visible;"><div class="dataTag ui-draggable" id="limegreentag" style="background-color: black; color: limegreen; border-color: limegreen; position: absolute; z-index: 2; top: 176px; left: 732.68px; visibility: visible;">DAL88<br><span id="speedSpan">600 kts</span></div></div>
     <!-- <div class="planeBlock">
@@ -311,7 +435,11 @@
      </tbody></table>
  	<table id="problemsTable" style="margin-left:100px;" width="700" border="0" cellspacing="1" cellpadding="1" summary="problem selection">
       <tbody><tr class="row2" width="50%" style="display: table-row;">
-        <td id="2td1" width="180" height="90" class="imageProblemButton" style="background-image: url(&quot;images/S33CE-ProbSelected.png&quot;);">		
+        <td id="2td1" 
+            width="180" 
+            height="90" 
+            class="imageProblemButton" 
+            style="background-image: url(&quot;images/S33CE-ProbSelected.png&quot;);">		
 		 	Problem 2-1
          </td>
          <td id="2td5" width="180" height="90" class="imageProblemButton">		
