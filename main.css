@@ -297,7 +297,6 @@ body,html {
 .imageSpeedButton{
 	 width: 100px;
 	 height: 40px;
-     top: 90%
  	 z-index:5;
 	 background-image:url('../images/bluebutton.png');
 	 background-repeat:no-repeat;
